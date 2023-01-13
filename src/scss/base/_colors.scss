@@ -1,10 +1,21 @@
-$white: #ffffff;
-$black: #1a1a1b;
-$slate: #1d2028;
-$deepGrey: #1a1a1b;
+/// dark theme neutral colors
+$white-100: #ffffff;
+$black-100: #0c0c0c;
+$slate-100: #15151a;
 
-// @function use-theme-color($mode: "light-mode", $type: "neutral", $shade: "00") {
-//   $colorkey: "#{$mode}-#{$type}-#{$shade}";
-//   $getcolor: map-get($Basecolormap, $colorkey);
-//   @return $getcolor;
-// }
+/// dark theme accent colors
+$accent-red: #f09286;
+$accent-orange: #f6c983;
+$accent-yellow: #fefbc0;
+$accent-green: #d2e7ba;
+$accent-cyan: #a5e1fa;
+$accent-blue: #adc5fa;
+$accent-purple: #ab8df7;
+$accent-violet: #d796f8;
+$accent-magenta: #de7890;
+
+/// base theme alert colors
+$alert-info: $accent-blue;
+$alert-error: $accent-red;
+$alert-warning: $accent-yellow;
+$alert-success: $accent-green;

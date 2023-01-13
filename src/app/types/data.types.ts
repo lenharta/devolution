@@ -6,14 +6,11 @@ export enum $THEMEMODE {
 
 export enum $ACCENTMODE {
   red = "accent-red",
-  blue = "accent-blue",
-  teal = "accent-teal",
-  cyan = "accent-cyan",
-  green = "accent-green",
-  yellow = "accent-yellow",
-  purple = "accent-purple",
   orange = "accent-orange",
-  magenta = "accent-magenta",
+  yellow = "accent-yellow",
+  green = "accent-green",
+  blue = "accent-blue",
+  violet = "accent-violet",
 }
 
 export enum $FONTVARIANT {

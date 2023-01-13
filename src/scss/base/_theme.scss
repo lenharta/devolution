@@ -1,134 +1,67 @@
 @use "./colors" as *;
 
-$Thememap_modes: ("light-mode" "dark-mode" "dim-mode");
-
-$surfacekeys_primary: (
-  "pri-surface-00",
-  "pri-surface-01",
-  "pri-surface-02",
-  "pri-surface-03",
-  "pri-surface-04",
-  "pri-surface-05"
-);
-
-$surfacekeys_secondary: (
-  "sec-surface-00",
-  "sec-surface-01",
-  "sec-surface-02",
-  "sec-surface-03",
-  "sec-surface-04",
-  "sec-surface-05"
-);
-
-$Thememap: (
+$THEMEMAP: (
   "light-mode": (
-    "pri-surface-00": $white,
-    "pri-surface-01": darken($white, 10%),
-    "pri-surface-02": darken($white, 20%),
-    "pri-surface-03": darken($white, 30%),
-    "pri-surface-04": darken($white, 40%),
-    "pri-surface-05": darken($white, 50%),
-    "pri-text-01": rgba($black, 0.87),
-    "pri-text-02": rgba($black, 0.65),
-    "pri-text-03": rgba($black, 0.43),
-    "sec-surface-00": $black,
-    "sec-surface-01": lighten($black, 5%),
-    "sec-surface-02": lighten($black, 10%),
-    "sec-surface-03": lighten($black, 15%),
-    "sec-surface-04": lighten($black, 20%),
-    "sec-surface-05": lighten($black, 25%),
-    "sec-text-01": rgba($white, 0.87),
-    "sec-text-02": rgba($white, 0.65),
-    "sec-text-03": rgba($white, 0.43),
+    "p-surface-L0": $white-100,
+    "p-surface-L1": darken($white-100, 5%),
+    "p-surface-L2": darken($white-100, 10%),
+    "p-surface-L3": darken($white-100, 15%),
+    "p-surface-L4": darken($white-100, 20%),
+    "p-text-01": rgba($black-100, 0.88),
+    "p-text-02": rgba($black-100, 0.66),
+    "p-text-03": rgba($black-100, 0.44),
   ),
   "dark-mode": (
-    "pri-surface-00": $black,
-    "pri-surface-01": lighten($black, 5%),
-    "pri-surface-02": lighten($black, 10%),
-    "pri-surface-03": lighten($black, 15%),
-    "pri-surface-04": lighten($black, 20%),
-    "pri-surface-05": lighten($black, 25%),
-    "pri-text-01": rgba($white, 0.87),
-    "pri-text-02": rgba($white, 0.65),
-    "pri-text-03": rgba($white, 0.43),
-    "sec-surface-00": $white,
-    "sec-surface-01": darken($white, 10%),
-    "sec-surface-02": darken($white, 20%),
-    "sec-surface-03": darken($white, 30%),
-    "sec-surface-04": darken($white, 40%),
-    "sec-surface-05": darken($white, 50%),
-    "sec-text-01": rgba($black, 0.87),
-    "sec-text-02": rgba($black, 0.65),
-    "sec-text-03": rgba($black, 0.43),
+    "p-surface-L0": $black-100,
+    "p-surface-L1": lighten($black-100, 5%),
+    "p-surface-L2": lighten($black-100, 10%),
+    "p-surface-L3": lighten($black-100, 15%),
+    "p-surface-L4": lighten($black-100, 20%),
+    "p-text-01": rgba($white-100, 0.88),
+    "p-text-02": rgba($white-100, 0.66),
+    "p-text-03": rgba($white-100, 0.44),
   ),
   "dim-mode": (
-    "pri-surface-00": $slate,
-    "pri-surface-01": lighten($slate, 5%),
-    "pri-surface-02": lighten($slate, 10%),
-    "pri-surface-03": lighten($slate, 15%),
-    "pri-surface-04": lighten($slate, 20%),
-    "pri-surface-05": lighten($slate, 25%),
-    "pri-text-01": rgba($white, 0.87),
-    "pri-text-02": rgba($white, 0.65),
-    "pri-text-03": rgba($white, 0.43),
-    "sec-surface-00": $white,
-    "sec-surface-01": darken($white, 10%),
-    "sec-surface-02": darken($white, 20%),
-    "sec-surface-03": darken($white, 30%),
-    "sec-surface-04": darken($white, 40%),
-    "sec-surface-05": darken($white, 50%),
-    "sec-text-01": rgba($black, 0.87),
-    "sec-text-02": rgba($black, 0.65),
-    "sec-text-03": rgba($black, 0.43),
+    "p-surface-L0": $slate-100,
+    "p-surface-L1": lighten($slate-100, 5%),
+    "p-surface-L2": lighten($slate-100, 10%),
+    "p-surface-L3": lighten($slate-100, 15%),
+    "p-surface-L4": lighten($slate-100, 20%),
+    "p-text-01": rgba($white-100, 0.88),
+    "p-text-02": rgba($white-100, 0.66),
+    "p-text-03": rgba($white-100, 0.44),
   ),
 );
 
-$Accentmap: (
-  "light-mode": (
-    "accent-red": #cf6370,
-    "accent-orange": #f2ad8e,
-    "accent-yellow": #f5e0a6,
-    "accent-green": #8eccb5,
-    "accent-blue": #7999c8,
-    "accent-violet": #ac98d4,
-  ),
-  "dark-mode": (
-    "accent-red": #cf6370,
-    "accent-orange": #f2ad8e,
-    "accent-yellow": #f5e0a6,
-    "accent-green": #8eccb5,
-    "accent-blue": #7999c8,
-    "accent-violet": #ac98d4,
-  ),
-  "dim-mode": (
-    "accent-red": #cf6370,
-    "accent-orange": #f2ad8e,
-    "accent-yellow": #f5e0a6,
-    "accent-green": #8eccb5,
-    "accent-blue": #7999c8,
-    "accent-violet": #ac98d4,
-  ),
+/// build base theme
+$modekeys: ("light-mode", "dark-mode", "dim-mode");
+
+$p-surfacekeys: (
+  "p-surface-L1",
+  "p-surface-L2",
+  "p-surface-L3",
+  "p-surface-L4"
 );
 
-@each $modekey, $modemap in $Thememap {
-  /// base mode color
+$s-surfacekeys: (
+  "s-surface-L1",
+  "s-surface-L2",
+  "s-surface-L3",
+  "s-surface-L4"
+);
+
+@each $modekey, $modemap in $THEMEMAP {
   [data-mode-type="#{$modekey}"] {
-    color: map-get($modemap, "pri-text-01");
-    background-color: map-get($modemap, "pri-surface-00");
+    $primary-bgd: map-get($modemap, "p-surface-L0");
+    $primary-txt: map-get($modemap, "p-text-01");
 
-    /// base primary surfaces
-    @each $surface in $surfacekeys_primary {
-      .#{$surface} {
-        color: map-get($modemap, "pri-text-01");
-        background-color: map-get($modemap, $surface);
-      }
-    }
+    background-color: $primary-bgd;
+    color: $primary-txt;
 
-    /// base secondary surfaces
-    @each $surface in $surfacekeys_secondary {
-      .#{$surface} {
-        color: map-get($modemap, "sec-text-01");
-        background-color: map-get($modemap, $surface);
+    @each $surfacekey in $p-surfacekeys {
+      .#{$surfacekey} {
+        background-color: map-get($modemap, $surfacekey);
+        color: $primary-txt;
       }
     }
   }
