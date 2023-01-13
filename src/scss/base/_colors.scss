@@ -1,0 +1,10 @@
+$white: #ffffff;
+$black: #1a1a1b;
+$slate: #1d2028;
+$deepGrey: #1a1a1b;
+
+// @function use-theme-color($mode: "light-mode", $type: "neutral", $shade: "00") {
+//   $colorkey: "#{$mode}-#{$type}-#{$shade}";
+//   $getcolor: map-get($Basecolormap, $colorkey);
+//   @return $getcolor;
+// }

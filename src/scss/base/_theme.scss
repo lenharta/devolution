@@ -1,0 +1,141 @@
+@use "./colors" as *;
+
+$Thememap_modes: ("light-mode" "dark-mode" "dim-mode");
+
+$surfacekeys_primary: (
+  "pri-surface-00",
+  "pri-surface-01",
+  "pri-surface-02",
+  "pri-surface-03",
+  "pri-surface-04",
+  "pri-surface-05"
+);
+
+$surfacekeys_secondary: (
+  "sec-surface-00",
+  "sec-surface-01",
+  "sec-surface-02",
+  "sec-surface-03",
+  "sec-surface-04",
+  "sec-surface-05"
+);
+
+$Thememap: (
+  "light-mode": (
+    "pri-surface-00": $white,
+    "pri-surface-01": darken($white, 10%),
+    "pri-surface-02": darken($white, 20%),
+    "pri-surface-03": darken($white, 30%),
+    "pri-surface-04": darken($white, 40%),
+    "pri-surface-05": darken($white, 50%),
+    "pri-text-01": rgba($black, 0.87),
+    "pri-text-02": rgba($black, 0.65),
+    "pri-text-03": rgba($black, 0.43),
+    "sec-surface-00": $black,
+    "sec-surface-01": lighten($black, 5%),
+    "sec-surface-02": lighten($black, 10%),
+    "sec-surface-03": lighten($black, 15%),
+    "sec-surface-04": lighten($black, 20%),
+    "sec-surface-05": lighten($black, 25%),
+    "sec-text-01": rgba($white, 0.87),
+    "sec-text-02": rgba($white, 0.65),
+    "sec-text-03": rgba($white, 0.43),
+  ),
+  "dark-mode": (
+    "pri-surface-00": $black,
+    "pri-surface-01": lighten($black, 5%),
+    "pri-surface-02": lighten($black, 10%),
+    "pri-surface-03": lighten($black, 15%),
+    "pri-surface-04": lighten($black, 20%),
+    "pri-surface-05": lighten($black, 25%),
+    "pri-text-01": rgba($white, 0.87),
+    "pri-text-02": rgba($white, 0.65),
+    "pri-text-03": rgba($white, 0.43),
+    "sec-surface-00": $white,
+    "sec-surface-01": darken($white, 10%),
+    "sec-surface-02": darken($white, 20%),
+    "sec-surface-03": darken($white, 30%),
+    "sec-surface-04": darken($white, 40%),
+    "sec-surface-05": darken($white, 50%),
+    "sec-text-01": rgba($black, 0.87),
+    "sec-text-02": rgba($black, 0.65),
+    "sec-text-03": rgba($black, 0.43),
+  ),
+  "dim-mode": (
+    "pri-surface-00": $slate,
+    "pri-surface-01": lighten($slate, 5%),
+    "pri-surface-02": lighten($slate, 10%),
+    "pri-surface-03": lighten($slate, 15%),
+    "pri-surface-04": lighten($slate, 20%),
+    "pri-surface-05": lighten($slate, 25%),
+    "pri-text-01": rgba($white, 0.87),
+    "pri-text-02": rgba($white, 0.65),
+    "pri-text-03": rgba($white, 0.43),
+    "sec-surface-00": $white,
+    "sec-surface-01": darken($white, 10%),
+    "sec-surface-02": darken($white, 20%),
+    "sec-surface-03": darken($white, 30%),
+    "sec-surface-04": darken($white, 40%),
+    "sec-surface-05": darken($white, 50%),
+    "sec-text-01": rgba($black, 0.87),
+    "sec-text-02": rgba($black, 0.65),
+    "sec-text-03": rgba($black, 0.43),
+  ),
+);
+
+$Accentmap: (
+  "light-mode": (
+    "accent-red": #cf6370,
+    "accent-orange": #f2ad8e,
+    "accent-yellow": #f5e0a6,
+    "accent-green": #8eccb5,
+    "accent-blue": #7999c8,
+    "accent-violet": #ac98d4,
+  ),
+  "dark-mode": (
+    "accent-red": #cf6370,
+    "accent-orange": #f2ad8e,
+    "accent-yellow": #f5e0a6,
+    "accent-green": #8eccb5,
+    "accent-blue": #7999c8,
+    "accent-violet": #ac98d4,
+  ),
+  "dim-mode": (
+    "accent-red": #cf6370,
+    "accent-orange": #f2ad8e,
+    "accent-yellow": #f5e0a6,
+    "accent-green": #8eccb5,
+    "accent-blue": #7999c8,
+    "accent-violet": #ac98d4,
+  ),
+);
+
+@each $modekey, $modemap in $Thememap {
+  /// base mode color
+  [data-mode-type="#{$modekey}"] {
+    color: map-get($modemap, "pri-text-01");
+    background-color: map-get($modemap, "pri-surface-00");
+
+    /// base primary surfaces
+    @each $surface in $surfacekeys_primary {
+      .#{$surface} {
+        color: map-get($modemap, "pri-text-01");
+        background-color: map-get($modemap, $surface);
+      }
+    }
+
+    /// base secondary surfaces
+    @each $surface in $surfacekeys_secondary {
+      .#{$surface} {
+        color: map-get($modemap, "sec-text-01");
+        background-color: map-get($modemap, $surface);
+      }
+    }
+  }
+}
+
+.surface-swatch {
+  padding: 2rem 1rem;
+}
+
+// // accent gradient from 60-40 shade rangemary

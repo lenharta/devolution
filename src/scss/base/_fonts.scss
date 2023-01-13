@@ -1,0 +1,136 @@
+$font-size-01: 12px;
+$font-size-02: 14px;
+$font-size-03: 16px;
+$font-size-04: 18px;
+$font-size-05: 22px;
+$font-size-06: 24px;
+$font-size-07: 28px;
+$font-size-08: 32px;
+$font-size-09: 36px;
+$font-size-10: 40px;
+$font-size-11: 44px;
+$font-size-12: 48px;
+
+$font-height-01: 120%;
+$font-height-02: 130%;
+$font-height-03: 140%;
+$font-height-04: 150%;
+$font-height-05: 160%;
+$font-height-06: 170%;
+
+$primary-font-family-bold: "cereal-bold";
+$primary-font-family-light: "cereal-light";
+$primary-font-family-black: "cereal-black";
+$primary-font-family-medium: "cereal-medium";
+$primary-font-family-regular: "cereal-regular";
+
+$Fontmap_urls: (
+  "cereal-bold": "/fonts/Airbnb-Cereal-Bold.woff2",
+  "cereal-light": "/fonts/Airbnb-Cereal-Light.woff2",
+  "cereal-black": "/fonts/Airbnb-Cereal-Black.woff2",
+  "cereal-medium": "/fonts/Airbnb-Cereal-Medium.woff2",
+  "cereal-regular": "/fonts/Airbnb-Cereal-Regular.woff2",
+);
+
+@each $family, $url in $Fontmap_urls {
+  @font-face {
+    font-family: $family;
+    src: url($url);
+  }
+}
+
+$Fontmap: (
+  "headline-1": (
+    "size": $font-size-12,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "headline-2": (
+    "size": $font-size-11,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "subheadline-1": (
+    "size": $font-size-10,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "subheadline-2": (
+    "size": $font-size-09,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "overline-1": (
+    "size": $font-size-07,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "overline-2": (
+    "size": $font-size-06,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "body-L": (
+    "size": $font-size-05,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "body-1": (
+    "size": $font-size-03,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "body-2": (
+    "size": $font-size-02,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "label-1": (
+    "size": $font-size-03,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "label-2": (
+    "size": $font-size-02,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "action-1": (
+    "size": $font-size-04,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "action-2": (
+    "size": $font-size-03,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "caption-1": (
+    "size": $font-size-02,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "caption-2": (
+    "size": $font-size-01,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "footnote-1": (
+    "size": $font-size-02,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+  "footnote-2": (
+    "size": $font-size-01,
+    "height": $font-height-01,
+    "family": $primary-font-family-regular,
+  ),
+);
+
+@each $font, $variantmap in $Fontmap {
+  [data-font-type="#{$font}"] {
+    font-size: map-get($variantmap, "size");
+    font-family: map-get($variantmap, "family");
+    line-height: map-get($variantmap, "height");
+  }
+}

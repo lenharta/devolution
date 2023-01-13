@@ -1,0 +1,44 @@
+@mixin use-grid-container($columns: 1, $rows: auto) {
+  display: grid;
+  grid-template-rows: repeat($rows, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+[data-container-type="container-app"] {
+  @include use-grid-container;
+  isolation: isolate;
+  min-height: 100vh;
+  display: block;
+}
+
+[data-container-type="container-page"] {
+  @include use-grid-container;
+  padding-inline: 1rem;
+  padding-block: 8rem;
+  margin-inline: auto;
+}
+
+[data-container-type="container-header"] {
+  @include use-grid-container;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+[data-container-type="container-footer"] {
+  @include use-grid-container;
+  padding-inline: 1rem;
+}
+
+// [data-container-type="container-card"] {
+//   @include use-grid-container;
+//   margin-top: 4rem;
+//   padding-block: 1.5rem;
+//   padding-inline: 1.5rem;
+// }
+
+// [data-container-type="container-section"] {
+//   @include use-grid-container;
+//   padding-block: 3rem;
+// }
