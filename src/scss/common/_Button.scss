@@ -1,0 +1,40 @@
+@use "../base/theme" as *;
+@use "../base/variables" as *;
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacer-1 0;
+  gap: 0.5rem;
+
+  &-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+
+  &-secondary {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+
+  &-info {
+    background-color: var(--status-info);
+    color: var(--primary-surface-00);
+  }
+
+  &-warning {
+    background-color: var(--status-warning);
+    color: var(--primary-surface-00);
+  }
+
+  &-success {
+    background-color: var(--status-success);
+    color: var(--primary-surface-00);
+  }
+
+  &-error {
+    background-color: var(--status-error);
+    color: var(--primary-surface-00);
+  }
+}

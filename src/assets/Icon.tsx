@@ -1,33 +1,23 @@
 import {
-  ArrowDown,
-  ArrowDownLeft,
-  ArrowDownRight,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowUpLeft,
-  ArrowUpRight,
-  HouseOutlined,
-  InfoOutlinedCircle,
+  ArrowDownIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
+  HouseOutlinedIcon,
 } from "./icons";
 
 const iconData = {
-  ArrowDownRight: <ArrowDownRight />,
-  ArrowDownLeft: <ArrowDownLeft />,
-  ArrowDown: <ArrowDown />,
-  ArrowLeft: <ArrowLeft />,
-  ArrowRight: <ArrowRight />,
-  ArrowUp: <ArrowUp />,
-  ArrowUpLeft: <ArrowUpLeft />,
-  ArrowUpRight: <ArrowUpRight />,
-  HouseOutlined: <HouseOutlined />,
-  InfoOutlinedCircle: <InfoOutlinedCircle />,
+  ArrowUp: <ArrowUpIcon />,
+  ArrowDown: <ArrowDownIcon />,
+  ArrowLeft: <ArrowLeftIcon />,
+  ArrowRight: <ArrowRightIcon />,
+  HouseOutlined: <HouseOutlinedIcon />,
 };
 
 export type IconDataType = typeof iconData;
 export type IconNameType = keyof IconDataType;
 
-const Icon = ({ name = "ArrowDown" }: { name: IconNameType }) => {
+const Icon = ({ name = "ArrowUp" }: { name: IconNameType }) => {
   return <>{iconData[name]}</>;
 };
 export default Icon;

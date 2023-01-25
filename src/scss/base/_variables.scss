@@ -1,0 +1,26 @@
+$spacer-1: 1.5625rem;
+$spacer-2: 1.5625rem * 2;
+$spacer-3: 1.5625rem * 3;
+$spacer-4: 1.5625rem * 4;
+
+$radius-1: 0.5rem;
+$radius-2: 0.75rem;
+$radius-3: 0.1rem;
+
+$border-1: 1px solid;
+$border-2: 2px solid;
+$border-3: 3px solid;
+
+$modekeys: ("light-mode", "dark-mode", "dim-mode");
+
+$accentkeys: (
+  "accent-red",
+  "accent-orange",
+  "accent-yellow",
+  "accent-green",
+  "accent-cyan",
+  "accent-blue",
+  "accent-purple",
+  "accent-violet",
+  "accent-magenta"
+);

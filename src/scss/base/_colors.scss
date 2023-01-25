@@ -1,21 +1,145 @@
-/// dark theme neutral colors
-$white-100: #ffffff;
-$black-100: #0c0c0c;
-$slate-100: #15151a;
+/// NEUTRAL
+$c-neutral-00: hsl(0, 0%, 99%);
+$c-neutral-10: hsl(0, 0%, 90%);
+$c-neutral-20: hsl(0, 0%, 80%);
+$c-neutral-30: hsl(0, 0%, 70%);
+$c-neutral-40: hsl(0, 0%, 60%);
+$c-neutral-50: hsl(0, 0%, 50%);
+$c-neutral-60: hsl(0, 0%, 40%);
+$c-neutral-70: hsl(0, 0%, 30%);
+$c-neutral-80: hsl(0, 0%, 20%);
+$c-neutral-90: hsl(0, 0%, 10%);
+$c-neutral-100: hsl(0, 0%, 01%);
 
-/// dark theme accent colors
-$accent-red: #f09286;
-$accent-orange: #f6c983;
-$accent-yellow: #fefbc0;
-$accent-green: #d2e7ba;
-$accent-cyan: #a5e1fa;
-$accent-blue: #adc5fa;
-$accent-purple: #ab8df7;
-$accent-violet: #d796f8;
-$accent-magenta: #de7890;
-
-/// base theme alert colors
-$alert-info: $accent-blue;
-$alert-error: $accent-red;
-$alert-warning: $accent-yellow;
-$alert-success: $accent-green;
+/// DIM-NEUTRAL
+$c-dim-neutral-00: hsl(231, 13%, 99%);
+$c-dim-neutral-10: hsl(231, 13%, 90%);
+$c-dim-neutral-20: hsl(231, 13%, 80%);
+$c-dim-neutral-30: hsl(231, 13%, 70%);
+$c-dim-neutral-40: hsl(231, 13%, 60%);
+$c-dim-neutral-50: hsl(231, 13%, 50%);
+$c-dim-neutral-60: hsl(231, 13%, 40%);
+$c-dim-neutral-70: hsl(231, 13%, 30%);
+$c-dim-neutral-80: hsl(231, 13%, 20%);
+$c-dim-neutral-90: hsl(231, 13%, 10%);
+$c-dim-neutral-100: hsl(231, 13%, 01%);
+/// RED
+$c-accent-red-00: hsl(7, 78%, 99%);
+$c-accent-red-10: hsl(7, 78%, 90%);
+$c-accent-red-20: hsl(7, 78%, 80%);
+$c-accent-red-30: hsl(7, 78%, 70%);
+$c-accent-red-40: hsl(7, 78%, 60%);
+$c-accent-red-50: hsl(7, 78%, 50%);
+$c-accent-red-60: hsl(7, 78%, 40%);
+$c-accent-red-70: hsl(7, 78%, 30%);
+$c-accent-red-80: hsl(7, 78%, 20%);
+$c-accent-red-90: hsl(7, 78%, 10%);
+$c-accent-red-100: hsl(7, 78%, 01%);
+/// ORANGE
+$c-accent-orange-00: hsl(37, 86%, 99%);
+$c-accent-orange-10: hsl(37, 86%, 90%);
+$c-accent-orange-20: hsl(37, 86%, 80%);
+$c-accent-orange-30: hsl(37, 86%, 70%);
+$c-accent-orange-40: hsl(37, 86%, 60%);
+$c-accent-orange-50: hsl(37, 86%, 50%);
+$c-accent-orange-60: hsl(37, 86%, 40%);
+$c-accent-orange-70: hsl(37, 86%, 30%);
+$c-accent-orange-80: hsl(37, 86%, 20%);
+$c-accent-orange-90: hsl(37, 86%, 10%);
+$c-accent-orange-100: hsl(37, 86%, 01%);
+///  GREEN
+$c-accent-green-00: hsl(88, 48%, 99%);
+$c-accent-green-10: hsl(88, 48%, 90%);
+$c-accent-green-20: hsl(88, 48%, 80%);
+$c-accent-green-30: hsl(88, 48%, 70%);
+$c-accent-green-40: hsl(88, 48%, 60%);
+$c-accent-green-50: hsl(88, 48%, 50%);
+$c-accent-green-60: hsl(88, 48%, 40%);
+$c-accent-green-70: hsl(88, 48%, 30%);
+$c-accent-green-80: hsl(88, 48%, 20%);
+$c-accent-green-90: hsl(88, 48%, 10%);
+$c-accent-green-100: hsl(88, 48%, 01%);
+/// YELLOW
+$c-accent-yellow-00: hsl(57, 97%, 99%);
+$c-accent-yellow-10: hsl(57, 97%, 90%);
+$c-accent-yellow-20: hsl(57, 97%, 80%);
+$c-accent-yellow-30: hsl(57, 97%, 70%);
+$c-accent-yellow-40: hsl(57, 97%, 60%);
+$c-accent-yellow-50: hsl(57, 97%, 50%);
+$c-accent-yellow-60: hsl(57, 97%, 40%);
+$c-accent-yellow-70: hsl(57, 97%, 30%);
+$c-accent-yellow-80: hsl(57, 97%, 20%);
+$c-accent-yellow-90: hsl(57, 97%, 10%);
+$c-accent-yellow-100: hsl(57, 97%, 01%);
+/// CYAN
+$c-accent-cyan-00: hsl(198, 89%, 99%);
+$c-accent-cyan-10: hsl(198, 89%, 90%);
+$c-accent-cyan-20: hsl(198, 89%, 80%);
+$c-accent-cyan-30: hsl(198, 89%, 70%);
+$c-accent-cyan-40: hsl(198, 89%, 60%);
+$c-accent-cyan-50: hsl(198, 89%, 50%);
+$c-accent-cyan-60: hsl(198, 89%, 40%);
+$c-accent-cyan-70: hsl(198, 89%, 30%);
+$c-accent-cyan-80: hsl(198, 89%, 20%);
+$c-accent-cyan-90: hsl(198, 89%, 10%);
+$c-accent-cyan-100: hsl(198, 89%, 01%);
+/// BLUE
+$c-accent-blue-00: hsl(221, 89%, 99%);
+$c-accent-blue-10: hsl(221, 89%, 90%);
+$c-accent-blue-20: hsl(221, 89%, 80%);
+$c-accent-blue-30: hsl(221, 89%, 70%);
+$c-accent-blue-40: hsl(221, 89%, 60%);
+$c-accent-blue-50: hsl(221, 89%, 50%);
+$c-accent-blue-60: hsl(221, 89%, 40%);
+$c-accent-blue-70: hsl(221, 89%, 30%);
+$c-accent-blue-80: hsl(221, 89%, 20%);
+$c-accent-blue-90: hsl(221, 89%, 10%);
+$c-accent-blue-100: hsl(221, 89%, 01%);
+/// PURPLE
+$c-accent-purple-00: hsl(257, 87%, 99%);
+$c-accent-purple-10: hsl(257, 87%, 90%);
+$c-accent-purple-20: hsl(257, 87%, 80%);
+$c-accent-purple-30: hsl(257, 87%, 70%);
+$c-accent-purple-40: hsl(257, 87%, 60%);
+$c-accent-purple-50: hsl(257, 87%, 50%);
+$c-accent-purple-60: hsl(257, 87%, 40%);
+$c-accent-purple-70: hsl(257, 87%, 30%);
+$c-accent-purple-80: hsl(257, 87%, 20%);
+$c-accent-purple-90: hsl(257, 87%, 10%);
+$c-accent-purple-100: hsl(257, 87%, 01%);
+/// VIOLET
+$c-accent-violet-00: hsl(280, 87%, 99%);
+$c-accent-violet-10: hsl(280, 87%, 90%);
+$c-accent-violet-20: hsl(280, 87%, 80%);
+$c-accent-violet-30: hsl(280, 87%, 70%);
+$c-accent-violet-40: hsl(280, 87%, 60%);
+$c-accent-violet-50: hsl(280, 87%, 50%);
+$c-accent-violet-60: hsl(280, 87%, 40%);
+$c-accent-violet-70: hsl(280, 87%, 30%);
+$c-accent-violet-80: hsl(280, 87%, 20%);
+$c-accent-violet-90: hsl(280, 87%, 10%);
+$c-accent-violet-100: hsl(280, 87%, 01%);
+/// MAGENTA
+$c-accent-magenta-00: hsl(346, 61%, 99%);
+$c-accent-magenta-10: hsl(346, 61%, 90%);
+$c-accent-magenta-20: hsl(346, 61%, 80%);
+$c-accent-magenta-30: hsl(346, 61%, 70%);
+$c-accent-magenta-40: hsl(346, 61%, 60%);
+$c-accent-magenta-50: hsl(346, 61%, 50%);
+$c-accent-magenta-60: hsl(346, 61%, 40%);
+$c-accent-magenta-70: hsl(346, 61%, 30%);
+$c-accent-magenta-80: hsl(346, 61%, 20%);
+$c-accent-magenta-90: hsl(346, 61%, 10%);
+$c-accent-magenta-100: hsl(346, 61%, 01%);
+/// ALERT-INFO
+$c-alert-info-00: hsl(231, 95%, 99%);
+$c-alert-info-10: hsl(231, 95%, 90%);
+$c-alert-info-20: hsl(231, 95%, 80%);
+$c-alert-info-30: hsl(231, 95%, 70%);
+$c-alert-info-40: hsl(231, 95%, 60%);
+$c-alert-info-50: hsl(231, 95%, 50%);
+$c-alert-info-60: hsl(231, 95%, 40%);
+$c-alert-info-70: hsl(231, 95%, 30%);
+$c-alert-info-80: hsl(231, 95%, 20%);
+$c-alert-info-90: hsl(231, 95%, 10%);
+$c-alert-info-100: hsl(231, 95%, 01%);

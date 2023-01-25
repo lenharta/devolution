@@ -1,25 +1,25 @@
 import {
-  Brand,
-  CodeSandbox,
-  Facebook,
-  Github,
-  LinkedIn,
-  Twitter,
+  BrandLogo,
+  CodeSandboxLogo,
+  FacebookLogo,
+  GitHubLogo,
+  LinkedInLogo,
+  TwitterLogo,
 } from "./logos";
 
 const logoData = {
-  Brand: <Brand />,
-  CodeSandbox: <CodeSandbox />,
-  Facebook: <Facebook />,
-  Github: <Github />,
-  LinkedIn: <LinkedIn />,
-  Twitter: <Twitter />,
+  BrandLogo: <BrandLogo />,
+  CodeSandbox: <CodeSandboxLogo />,
+  Facebook: <FacebookLogo />,
+  GitHub: <GitHubLogo />,
+  LinkedIn: <LinkedInLogo />,
+  Twitter: <TwitterLogo />,
 };
 
 export type LogoDataType = typeof logoData;
 export type LogoNameType = keyof LogoDataType;
 
-const Logo = ({ name = "Brand" }: { name: LogoNameType }) => {
+const Logo = ({ name = "BrandLogo" }: { name: LogoNameType }) => {
   return <>{logoData[name]}</>;
 };
 export default Logo;

@@ -1,6 +1,6 @@
-export { default as Brand } from "./Brand";
-export { default as CodeSandbox } from "./CodeSandbox";
-export { default as Facebook } from "./Facebook";
-export { default as Github } from "./Github";
-export { default as LinkedIn } from "./LinkedIn";
-export { default as Twitter } from "./Twitter";
+export { default as BrandLogo } from "./BrandLogo";
+export { default as CodeSandboxLogo } from "./CodeSandboxLogo";
+export { default as FacebookLogo } from "./FacebookLogo";
+export { default as GitHubLogo } from "./GitHubLogo";
+export { default as LinkedInLogo } from "./LinkedInLogo";
+export { default as TwitterLogo } from "./TwitterLogo";

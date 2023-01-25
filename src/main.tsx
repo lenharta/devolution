@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { About, Contact, Home, PageNotFound } from "./pages";
-import { Layout, Page } from "./layout";
+import { Layout, PageWrapper } from "./components/layout";
+import { About, Admin, Contact, Home, NotFound } from "./routes";
 import "./scss/_main.scss";
 
 const router = createBrowserRouter([
@@ -12,19 +12,45 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Page title="Home" content={<Home />} />,
+        element: (
+          <PageWrapper id="pageId?=home" title="Home" content={<Home />} />
+        ),
       },
       {
         path: "about",
-        element: <Page title="About" content={<About />} />,
+        element: (
+          <PageWrapper id="pageId?=about" title="About" content={<About />} />
+        ),
       },
       {
         path: "contact",
-        element: <Page title="Contact" content={<Contact />} />,
+        element: (
+          <PageWrapper
+            id="pageId?=contact"
+            title="Contact"
+            content={<Contact />}
+          />
+        ),
+      },
+      {
+        path: "admin",
+        element: (
+          <PageWrapper
+            id="pageId?=admin"
+            title="Admin Toolbox"
+            content={<Admin />}
+          />
+        ),
       },
       {
         path: "*",
-        element: <Page title="Page Not Found" content={<PageNotFound />} />,
+        element: (
+          <PageWrapper
+            id="pageId?=notFound"
+            title="ERROR: 404 | Page Not Found"
+            content={<NotFound />}
+          />
+        ),
       },
     ],
   },
