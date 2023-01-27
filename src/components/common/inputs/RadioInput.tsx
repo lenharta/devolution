@@ -6,6 +6,7 @@ const RadioInput = ({
   value,
   label,
   message,
+  groupId,
   checked,
   disabled,
   onChange,
@@ -14,6 +15,7 @@ const RadioInput = ({
   value?: string | number;
   label?: string;
   message?: string;
+  groupId?: string;
   checked?: boolean;
   disabled?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -26,7 +28,8 @@ const RadioInput = ({
         value={value ?? ""}
         checked={checked ?? false}
         disabled={disabled ?? false}
-        className="RadioInput RadioInput-frame"
+        radioGroup={groupId ?? ""}
+        className="RadioInput"
         onChange={onChange ?? ((event) => console.log(event.target.value))}
       />
       {label && <Label id={id ?? ""} text={label} />}

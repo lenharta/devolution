@@ -12,7 +12,7 @@ const FormWrapper = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="FormWrapper" data-container-type={CONTAINERS.form}>
+    <div data-container={CONTAINERS.form}>
       <Subheadline text={title ?? "Form Title"} variant="subsection" />
       {legend && <legend>{legend}</legend>}
       <>{children}</>

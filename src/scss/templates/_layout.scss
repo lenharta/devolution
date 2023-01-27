@@ -1,0 +1,19 @@
+@mixin use-grid($columns: 1, $rows: auto) {
+  display: grid;
+  grid-template-rows: repeat($rows, 1fr);
+  grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin use-flex($Placement: center, $Direction: row) {
+  display: flex;
+
+  @if ($Direction == row) {
+    align-items: center;
+    justify-content: $Placement;
+  }
+
+  @if ($Direction == column) {
+    align-items: $Placement;
+    justify-content: center;
+  }
+}

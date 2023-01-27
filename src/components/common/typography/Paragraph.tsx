@@ -3,9 +3,10 @@ const Paragraph = ({
   variant,
 }: {
   text: string;
-  variant: "lead" | "one" | "two" | "caption" | "footnote";
+  variant: "lead" | "one" | "two" | "caption" | "footnote" | "label";
 }) => {
   const lookup = {
+    label: "fs-06 ff-medium",
     lead: "fs-05 ff-medium",
     one: "fs-04 ff-regular",
     two: "fs-03 ff-regular",

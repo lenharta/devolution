@@ -1,0 +1,35 @@
+@use "../base/theme" as *;
+@use "../templates/borders" as *;
+@use "../templates/layout" as *;
+
+.SelectWrapper {
+  color: var(--secondary);
+  background-color: var(--primary-surface-01);
+
+  @include use-grid;
+  width: min(25rem, 100%);
+  border-radius: 0.25rem;
+  position: relative;
+
+  border: solid 1px var(--primary-surface-02);
+
+  button {
+    // padding: 0.5rem 0.75rem;
+
+    // border: solid 1px transparent;
+    // background-color: transparent;
+    // color: var(--secondary);
+
+    // &:first-of-type {
+    //   border: solid 1px var(--primary-surface-02);
+    // }
+
+    // &:focus {
+    //   outline: solid 1px var(--secondary);
+    //   border-radius: 0.25rem;
+    // }
+    // &:hover {
+    //   background-color: var(--primary-surface-02);
+    // }
+  }
+}

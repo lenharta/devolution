@@ -33,7 +33,7 @@ export const RegisterStepNickname = ({
       <TextInput
         value={data.nickname}
         onChange={(event) => updateFields({ nickname: event.target.value })}
-        placeholder="Ex. BigKahuna101"
+        placeholder="Ex. username1234"
       />
     </FormWrapper>
   );
@@ -51,8 +51,6 @@ export const RegisterStepThemeMode = ({
   data,
   updateFields,
 }: RegisterStepProps) => {
-  console.log(data.mode);
-
   return (
     <FormWrapper title="Choose a Theme Mode.">
       {modeFormOptions.map(({ value, label }) => (
@@ -60,6 +58,7 @@ export const RegisterStepThemeMode = ({
           <RadioInput
             id={value}
             label={label}
+            groupId="mode-inputs"
             checked={value === data.mode ? true : false}
             onChange={(event) => updateFields({ mode: event.target.value })}
           />
@@ -93,6 +92,7 @@ export const RegisterStepThemeAccent = ({
           <RadioInput
             id={value}
             label={label}
+            groupId="accent-inputs"
             checked={value === data.accent ? true : false}
             onChange={(event) => updateFields({ mode: event.target.value })}
           />
@@ -105,7 +105,7 @@ export const RegisterStepThemeAccent = ({
 ///
 
 const avatarFormOptions = [
-  { value: "avatar-user", label: "Car" },
+  { value: "avatar-user", label: "User" },
   { value: "avatar-robot", label: "User" },
   { value: "avatar-rocket", label: "Plane" },
   { value: "avatar-basketball", label: "Robot" },
@@ -133,6 +133,7 @@ export const RegisterStepThemeAvatar = ({
           <RadioInput
             id={value}
             label={label}
+            groupId="avatar-inputs"
             checked={value === data.avatar ? true : false}
             onChange={(event) => updateFields({ avatar: event.target.value })}
           />

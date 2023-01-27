@@ -14,14 +14,23 @@ $red: hsl(10, 100%, 50%);
   --primary-surface-02: #{darken($white, 10%)};
   --primary-surface-03: #{darken($white, 15%)};
   --primary-surface-04: #{darken($white, 20%)};
-
   --secondary: #{$black};
   --secondary-surface-00: #{lighten($black, 01%)};
-  --secondary-surface-01: #{lighten($black, 12%)};
-  --secondary-surface-02: #{lighten($black, 18%)};
-  --secondary-surface-03: #{lighten($black, 24%)};
-  --secondary-surface-04: #{lighten($black, 32%)};
-  --status-info: #{darken($blue, 5%)};
+  --secondary-surface-01: #{lighten($black, 04%)};
+  --secondary-surface-02: #{lighten($black, 08%)};
+  --secondary-surface-03: #{lighten($black, 12%)};
+  --secondary-surface-04: #{lighten($black, 16%)};
+
+  --status-help: #{lighten($blue, 5%)};
+  --on-status-help: #{lighten($blue, 75%)};
+  --status-error: #{lighten($red, 5%)};
+  --on-status-error: #{lighten($red, 75%)};
+  --status-misuse: #{lighten($red, 5%)};
+  --on-status-misuse: #{lighten($red, 75%)};
+  --status-warn: #{lighten($yellow, 5%)};
+  --on-status-warn: #{lighten($yellow, 75%)};
+  --status-success: #{lighten($green, 5%)};
+  --on-status-success: #{lighten($green, 75%)};
 
   background-color: var(--primary);
   color: var(--secondary);
@@ -31,18 +40,27 @@ $red: hsl(10, 100%, 50%);
 :root {
   --primary: #{$black};
   --primary-surface-00: #{lighten($black, 01%)};
-  --primary-surface-01: #{lighten($black, 12%)};
-  --primary-surface-02: #{lighten($black, 18%)};
-  --primary-surface-03: #{lighten($black, 24%)};
-  --primary-surface-04: #{lighten($black, 32%)};
-
+  --primary-surface-01: #{lighten($black, 10%)};
+  --primary-surface-02: #{lighten($black, 20%)};
+  --primary-surface-03: #{lighten($black, 30%)};
+  --primary-surface-04: #{lighten($black, 40%)};
   --secondary: #{$white};
   --secondary-surface-00: #{darken($white, 01%)};
   --secondary-surface-01: #{darken($white, 05%)};
   --secondary-surface-02: #{darken($white, 10%)};
   --secondary-surface-03: #{darken($white, 15%)};
   --secondary-surface-04: #{darken($white, 20%)};
-  --status-info: #{lighten($blue, 10%)};
+
+  --status-help: #{lighten($blue, 10%)};
+  --on-status-help: #{lighten($blue, 80%)};
+  --status-error: #{lighten($red, 10%)};
+  --on-status-error: #{lighten($red, 80%)};
+  --status-misuse: #{lighten($red, 10%)};
+  --on-status-misuse: #{lighten($red, 80%)};
+  --status-warn: #{lighten($yellow, 10%)};
+  --on-status-warn: #{lighten($yellow, 80%)};
+  --status-success: #{lighten($green, 10%)};
+  --on-status-success: #{lighten($green, 80%)};
 
   background-color: var(--primary);
   color: var(--secondary);
@@ -88,4 +106,25 @@ $red: hsl(10, 100%, 50%);
 .ss-04 {
   background-color: var(--secondary-surface-04);
   color: var(--primary-surface-00);
+}
+
+.status-help {
+  background-color: var(--status-help);
+  color: var(--on-status-help);
+}
+.status-error {
+  background-color: var(--status-error);
+  color: var(--on-status-error);
+}
+.status-misuse {
+  background-color: var(--status-misuse);
+  color: var(--on-status-misuse);
+}
+.status-warning {
+  background-color: var(--status-warn);
+  color: var(--on-status-warn);
+}
+.status-success {
+  background-color: var(--status-success);
+  color: var(--on-status-success);
 }

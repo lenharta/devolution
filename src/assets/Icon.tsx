@@ -3,6 +3,9 @@ import {
   ArrowLeftIcon,
   ArrowRightIcon,
   ArrowUpIcon,
+  CaretDownIcon,
+  CaretsIcon,
+  CaretUpIcon,
   HouseOutlinedIcon,
 } from "./icons";
 
@@ -12,6 +15,9 @@ const iconData = {
   ArrowLeft: <ArrowLeftIcon />,
   ArrowRight: <ArrowRightIcon />,
   HouseOutlined: <HouseOutlinedIcon />,
+  carets: <CaretsIcon />,
+  caretUp: <CaretUpIcon />,
+  caretDown: <CaretDownIcon />,
 };
 
 export type IconDataType = typeof iconData;

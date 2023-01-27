@@ -1,4 +1,7 @@
 .TextInput {
+  --c-background: var(--secondary-surface-01);
+  --c-text: var(--primary);
+
   &-container {
     display: grid;
     grid-template-rows: auto;
