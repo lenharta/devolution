@@ -6,7 +6,7 @@ $green: hsl(154, 100%, 50%);
 $blue: hsl(215, 100%, 50%);
 $red: hsl(10, 100%, 50%);
 
-[data-theme-mode="theme-mode-light"],
+[data-theme-mode="mode-light"],
 :root {
   --primary: #{$white};
   --primary-surface-00: #{darken($white, 01%)};
@@ -36,7 +36,7 @@ $red: hsl(10, 100%, 50%);
   color: var(--secondary);
 }
 
-[data-theme-mode="theme-mode-dark"],
+[data-theme-mode="mode-dark"],
 :root {
   --primary: #{$black};
   --primary-surface-00: #{lighten($black, 01%)};

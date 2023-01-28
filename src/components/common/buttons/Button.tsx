@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { AppStoreObjectType } from "../../../app/local/app.types";
 import Icon, { IconDataType } from "../../../assets/Icon";
 
 const Button = ({
@@ -7,8 +8,7 @@ const Button = ({
   icon,
   text,
   value,
-  error,
-  warning,
+  status,
   onClick,
   disabled,
 }: {
@@ -16,9 +16,8 @@ const Button = ({
   type?: "submit" | "reset" | "button" | undefined;
   icon?: IconDataType;
   text?: string;
+  status?: AppStoreObjectType;
   value?: string | number;
-  error?: string;
-  warning?: string;
   onClick?: () => void;
   disabled?: boolean;
 }) => {
@@ -26,14 +25,16 @@ const Button = ({
   const ref = useRef<HTMLButtonElement>(null)!;
 
   useEffect(() => {
-    ref.current?.classList[error ? "add" : "remove"]("status-error");
-  }, [error]);
+    ref.current?.classList[status?.error ? "add" : "remove"]("status-error");
+  }, [status?.warning]);
 
   useEffect(() => {
-    ref.current?.classList[warning ? "add" : "remove"]("status-warning");
-  }, [warning]);
+    ref.current?.classList[status?.warning ? "add" : "remove"](
+      "status-warning"
+    );
+  }, [status?.warning]);
 
-  console.log(error);
+  console.log(ref.current?.classList);
 
   return (
     <button

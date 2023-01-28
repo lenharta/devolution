@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LocalStateContextProvider from "./app/local/AppContext";
 import { Layout, PageWrapper } from "./components/layout";
 import { About, Admin, Contact, Home, NotFound } from "./routes";
 import "./scss/_main.scss";
@@ -58,6 +59,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <LocalStateContextProvider>
+      <RouterProvider router={router} />
+    </LocalStateContextProvider>
   </React.StrictMode>
 );
