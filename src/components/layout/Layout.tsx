@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import ThemeContextProvider from "../../app/theme/ThemeContext";
+import Header from "./Header";
 
 export enum CONTAINERS {
   page = "container-page",
@@ -12,11 +13,12 @@ export enum CONTAINERS {
 
 const Layout = () => {
   return (
-    <div data-container={CONTAINERS.layout}>
-      <ThemeContextProvider>
+    <ThemeContextProvider>
+      <div data-container={CONTAINERS.layout}>
+        <Header />
         <Outlet />
-      </ThemeContextProvider>
-    </div>
+      </div>
+    </ThemeContextProvider>
   );
 };
 export default Layout;

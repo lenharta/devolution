@@ -23,5 +23,7 @@ export function userStoreReducer(
       return { ...state, ...action.payload };
     case "UPDATE-AUTH-PIN":
       return { ...state, ...action.payload };
+    default:
+      return state;
   }
 }

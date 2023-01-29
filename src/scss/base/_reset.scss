@@ -28,14 +28,26 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 input {
   border: none;
   outline: none;
+
+  &:disabled {
+    cursor: default;
+  }
 }

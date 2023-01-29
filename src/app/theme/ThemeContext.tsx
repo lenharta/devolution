@@ -1,8 +1,10 @@
 import { createContext } from "react";
-import { UseThemeStoreReturnType } from "./theme.types";
+import { useAppReducer } from "../local/useAppStore";
 import { useThemeStore } from "./useThemeStore";
 
-export const ThemeContext = createContext({} as UseThemeStoreReturnType);
+export const ThemeContext = createContext(
+  {} as ReturnType<typeof useThemeStore>
+);
 
 const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -1,6 +1,13 @@
-import { useEffect, useRef } from "react";
-import { AppStoreObjectType } from "../../../app/local/app.types";
-import Icon, { IconDataType } from "../../../assets/Icon";
+import { useRef } from "react";
+import { STATUSTYPE } from "../../../app/local/app.types";
+import { THEMESTOREOBJECTTYPE } from "../../../app/theme/theme.types";
+import Icon, { IconNameType } from "../../../assets/Icon";
+
+type ButtonVariantType =
+  | "default"
+  | "action"
+  | "action-secondary"
+  | "secondary";
 
 const Button = ({
   id,
@@ -9,32 +16,28 @@ const Button = ({
   text,
   value,
   status,
+  variant,
   onClick,
   disabled,
 }: {
   id?: string;
   type?: "submit" | "reset" | "button" | undefined;
-  icon?: IconDataType;
+  icon?: IconNameType;
   text?: string;
-  status?: AppStoreObjectType;
   value?: string | number;
+  status?: STATUSTYPE;
+  accent?: THEMESTOREOBJECTTYPE["accent"];
+  variant?: ButtonVariantType;
   onClick?: () => void;
   disabled?: boolean;
 }) => {
-  const displayIcon = [text ?? "Button Text", <Icon name="ArrowDown" />];
+  const textElement = (
+    <p className="fs-04 ff-medium">{text ?? "Button Text"}</p>
+  );
+  const displayWithIcon = [textElement, <Icon name="ArrowDown" />];
   const ref = useRef<HTMLButtonElement>(null)!;
-
-  useEffect(() => {
-    ref.current?.classList[status?.error ? "add" : "remove"]("status-error");
-  }, [status?.warning]);
-
-  useEffect(() => {
-    ref.current?.classList[status?.warning ? "add" : "remove"](
-      "status-warning"
-    );
-  }, [status?.warning]);
-
-  console.log(ref.current?.classList);
+  const buttonVariant = `Button-${variant ?? "default"}`;
+  const buttonStatus = `Button-${status ?? "status-idle"}`;
 
   return (
     <button
@@ -44,9 +47,9 @@ const Button = ({
       value={value ?? ""}
       onClick={onClick}
       disabled={disabled ?? false}
-      className="Button"
+      className={`Button ${buttonVariant} ${buttonStatus}`}
     >
-      {icon ? displayIcon : text ?? "Button Text"}
+      {icon ? displayWithIcon : textElement}
     </button>
   );
 };

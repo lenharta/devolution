@@ -1,13 +1,6 @@
 import Icon from "../assets/Icon";
 import Logo from "../assets/Logo";
-import { Headline, Subheadline } from "../components/common";
-
-export interface APPAUTHOBJECT {
-  pin: string;
-  uuid: string;
-  username: string;
-  password: string;
-}
+import { Headline } from "../components/common";
 
 const featureLookup = {
   appLogos: [
@@ -57,6 +50,20 @@ const featureLookup = {
     { key: "Airbnb-cereal-MEDIUM", value: "ff-medium" },
     { key: "Airbnb-cereal-REGULAR", value: "ff-regular" },
     { key: "Airbnb-cereal-LIGHT", value: "ff-light" },
+  ],
+  appButtonVariants: [
+    { key: "Default Button", value: "default" },
+    { key: "Disabled Button", value: "disabled" },
+    { key: "Action Button", value: "action" },
+    { key: "Secondary Button", value: "secondary" },
+    { key: "Action-Secondary Button", value: "action-secondary" },
+  ],
+  appButtonStatus: [
+    { key: "Help Button", value: "status-help" },
+    { key: "Error Button", value: "status-error" },
+    { key: "Misuse Button", value: "status-misuse" },
+    { key: "Warning Button", value: "status-warning" },
+    { key: "Success Button", value: "status-success" },
   ],
 };
 

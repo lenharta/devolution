@@ -1,13 +1,17 @@
+export type STATUSTYPE =
+  | "status-idle"
+  | "status-help"
+  | "status-error"
+  | "status-misuse"
+  | "status-success"
+  | "status-warning";
+
 export type APPSTOREOBJECTTYPE = {
   isHome: boolean;
   isLoading: boolean;
   isSession: boolean;
   isRegistered: boolean;
-  success: string | "status-success";
-  warning: string | "status-warning";
-  misuse: string | "status-misuse";
-  error: string | "status-error";
-  help: string | "status-help";
+  isStatus: STATUSTYPE;
 };
 
 export type APPSTOREACTIONTYPE =
@@ -15,8 +19,8 @@ export type APPSTOREACTIONTYPE =
   | { type: "STATUS-ISLOADING"; payload: { isLoading: boolean } }
   | { type: "STATUS-ISSESSION"; payload: { isSession: boolean } }
   | { type: "STATUS-ISREGISTERED"; payload: { isRegistered: boolean } }
-  | { type: "STATUS-SUCCESS"; payload: { success: string | "status-success" } }
-  | { type: "STATUS-WARNING"; payload: { warning: string | "status-warning" } }
-  | { type: "STATUS-MISUSE"; payload: { misuse: string | "status-misuse" } }
-  | { type: "STATUS-ERROR"; payload: { error: string | "status-error" } }
-  | { type: "STATUS-HELP"; payload: { help: string | "status-help" } };
+  | { type: "STATUS-SUCCESS"; payload: { status: "status-success" } }
+  | { type: "STATUS-WARNING"; payload: { status: "status-warning" } }
+  | { type: "STATUS-MISUSE"; payload: { status: "status-misuse" } }
+  | { type: "STATUS-ERROR"; payload: { status: "status-error" } }
+  | { type: "STATUS-HELP"; payload: { status: "status-help" } };

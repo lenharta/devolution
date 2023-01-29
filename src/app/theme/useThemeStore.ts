@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { ThemeStoreObjectInterface } from "./theme.types";
+import { useReducer } from "react";
+import { THEMESTOREOBJECTTYPE } from "./theme.types";
+import { themeStoreReducer } from "./themeStoreReducer";
 
-export const THEMESTOREOBJECT: ThemeStoreObjectInterface = {
-  mode: "mode-dark",
+export const THEMESTOREOBJECT: THEMESTOREOBJECTTYPE = {
+  mode: "mode-light",
   accent: "accent-blue",
   avatar: "avatar-robot",
 };
 
 export function useThemeStore() {
-  const themeStore = useState(THEMESTOREOBJECT);
-  return themeStore;
+  const reducer = useReducer(themeStoreReducer, THEMESTOREOBJECT);
+  return reducer;
 }

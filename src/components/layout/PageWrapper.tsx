@@ -11,14 +11,10 @@ const PageWrapper = ({
   title: string;
   content: React.ReactNode;
 }) => {
-  const theme = useContext(ThemeContext);
+  const [theme] = useContext(ThemeContext);
 
   return (
-    <div
-      id={id}
-      data-container={CONTAINERS.page}
-      data-theme-mode={theme[0].mode}
-    >
+    <div id={id} data-container={CONTAINERS.page} data-theme-mode={theme.mode}>
       <h1 className="fs-12 ff-bold">
         {title ?? "Page Not Found | Try reloading the page."}
       </h1>
