@@ -5,24 +5,24 @@ export function userStoreReducer(
   action: USERACTIONTYPE
 ) {
   switch (action.type) {
-    case "UPDATE-NAME-LAST":
-      return { ...state, ...action.payload };
-    case "UPDATE-NAME-FIRST":
-      return { ...state, ...action.payload };
-    case "UPDATE-NAME-MIDDLE":
-      return { ...state, ...action.payload };
-    case "UPDATE-NAME-PREFIX":
-      return { ...state, ...action.payload };
-    case "UPDATE-NAME-SUFFIX":
-      return { ...state, ...action.payload };
-    case "UPDATE-AUTH-PASSWORD":
-      return { ...state, ...action.payload };
-    case "UPDATE-AUTH-USERNAME":
-      return { ...state, ...action.payload };
-    case "UPDATE-AUTH-EMAIL":
-      return { ...state, ...action.payload };
-    case "UPDATE-AUTH-PIN":
-      return { ...state, ...action.payload };
+    case "NAME-LAST":
+      return { ...state, name: { last: action.payload } };
+    case "NAME-FIRST":
+      return { ...state, name: { first: action.payload } };
+    case "NAME-MIDDLE":
+      return { ...state, name: { middle: action.payload } };
+    case "NAME-PREFIX":
+      return { ...state, name: { prefix: action.payload } };
+    case "NAME-SUFFIX":
+      return { ...state, name: { suffix: action.payload } };
+    case "AUTH-PASSWORD":
+      return { ...state, auth: { password: action.payload } };
+    case "AUTH-USERNAME":
+      return { ...state, auth: { username: action.payload } };
+    case "AUTH-EMAIL":
+      return { ...state, auth: { email: action.payload } };
+    case "AUTH-PIN":
+      return { ...state, auth: { pin: action.payload } };
     default:
       return state;
   }

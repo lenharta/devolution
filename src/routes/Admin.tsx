@@ -1,3 +1,5 @@
+import { useContext, useEffect } from "react";
+import { AppContext } from "../app/local/AppContext";
 import Icon from "../assets/Icon";
 import Logo from "../assets/Logo";
 import { Headline } from "../components/common";

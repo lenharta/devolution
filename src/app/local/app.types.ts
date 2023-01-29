@@ -15,12 +15,13 @@ export type APPSTOREOBJECTTYPE = {
 };
 
 export type APPSTOREACTIONTYPE =
-  | { type: "STATUS-ISHOME"; payload: { isHome: boolean } }
-  | { type: "STATUS-ISLOADING"; payload: { isLoading: boolean } }
-  | { type: "STATUS-ISSESSION"; payload: { isSession: boolean } }
-  | { type: "STATUS-ISREGISTERED"; payload: { isRegistered: boolean } }
-  | { type: "STATUS-SUCCESS"; payload: { status: "status-success" } }
-  | { type: "STATUS-WARNING"; payload: { status: "status-warning" } }
-  | { type: "STATUS-MISUSE"; payload: { status: "status-misuse" } }
-  | { type: "STATUS-ERROR"; payload: { status: "status-error" } }
-  | { type: "STATUS-HELP"; payload: { status: "status-help" } };
+  | { type: "ISHOME"; payload: boolean }
+  | { type: "ISLOADING"; payload: boolean }
+  | { type: "ISSESSION"; payload: boolean }
+  | { type: "ISREGISTERED"; payload: boolean }
+  | { type: "STATUS-IDLE"; payload: "status-idle" }
+  | { type: "STATUS-HELP"; payload: "status-help" }
+  | { type: "STATUS-ERROR"; payload: "status-error" }
+  | { type: "STATUS-MISUSE"; payload: "status-misuse" }
+  | { type: "STATUS-WARNING"; payload: "status-warning" }
+  | { type: "STATUS-SUCCESS"; payload: "status-success" };

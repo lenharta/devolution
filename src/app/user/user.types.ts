@@ -17,15 +17,15 @@ export interface UserStoreObjectType {
 }
 
 export type USERACTIONTYPE =
-  | { type: "UPDATE-NAME-LAST"; payload: { name: { last: string } } }
-  | { type: "UPDATE-NAME-FIRST"; payload: { name: { first: string } } }
-  | { type: "UPDATE-NAME-MIDDLE"; payload: { name: { middle: string } } }
-  | { type: "UPDATE-NAME-PREFIX"; payload: { name: { prefix: string } } }
-  | { type: "UPDATE-NAME-SUFFIX"; payload: { name: { suffix: string } } }
-  | { type: "UPDATE-AUTH-PASSWORD"; payload: { auth: { password: string } } }
-  | { type: "UPDATE-AUTH-USERNAME"; payload: { auth: { username: string } } }
-  | { type: "UPDATE-AUTH-EMAIL"; payload: { auth: { email: string } } }
-  | { type: "UPDATE-AUTH-PIN"; payload: { auth: { pin: string } } };
+  | { type: "NAME-LAST"; payload: string }
+  | { type: "NAME-FIRST"; payload: string }
+  | { type: "NAME-MIDDLE"; payload: string }
+  | { type: "NAME-PREFIX"; payload: string }
+  | { type: "NAME-SUFFIX"; payload: string }
+  | { type: "AUTH-PASSWORD"; payload: string }
+  | { type: "AUTH-USERNAME"; payload: string }
+  | { type: "AUTH-EMAIL"; payload: string }
+  | { type: "AUTH-PIN"; payload: string };
 
 export type UseUserStoreReturnType = ReturnType<typeof useUserStore>;
 export type USERSTORE_TYPE = UseUserStoreReturnType[0];

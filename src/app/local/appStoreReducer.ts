@@ -5,24 +5,26 @@ export function appStoreReducer(
   action: APPSTOREACTIONTYPE
 ) {
   switch (action.type) {
-    case "STATUS-ISHOME":
-      return { ...state, ...action.payload };
-    case "STATUS-ISLOADING":
-      return { ...state, ...action.payload };
-    case "STATUS-ISSESSION":
-      return { ...state, ...action.payload };
-    case "STATUS-ISREGISTERED":
-      return { ...state, ...action.payload };
+    case "ISHOME":
+      return { ...state, isHome: action.payload };
+    case "ISLOADING":
+      return { ...state, isLoading: action.payload };
+    case "ISSESSION":
+      return { ...state, isSession: action.payload };
+    case "ISREGISTERED":
+      return { ...state, isRegistered: action.payload };
     case "STATUS-SUCCESS":
-      return { ...state, ...action.payload };
+      return { ...state, isStatus: action.payload };
     case "STATUS-WARNING":
-      return { ...state, ...action.payload };
+      return { ...state, isStatus: action.payload };
     case "STATUS-MISUSE":
-      return { ...state, ...action.payload };
+      return { ...state, isStatus: action.payload };
     case "STATUS-ERROR":
-      return { ...state, ...action.payload };
+      return { ...state, isStatus: action.payload };
     case "STATUS-HELP":
-      return { ...state, ...action.payload };
+      return { ...state, isStatus: action.payload };
+    case "STATUS-IDLE":
+      return { ...state, isStatus: action.payload };
     default:
       return state;
   }

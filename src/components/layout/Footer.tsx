@@ -1,16 +1,14 @@
-import { Headline, Paragraph } from "../common";
+import { useContext } from "react";
+import { ThemeContext } from "../../app/theme/ThemeContext";
+import { Subheadline } from "../common";
+import { CONTAINERS } from "./Layout";
 
 const Footer = () => {
+  const [theme] = useContext(ThemeContext);
+
   return (
-    <footer className="container-footer">
-      <Headline text="Required Sections" variant="page" />
-      <Paragraph text="InternalNavigation" variant="lead" />
-      <Paragraph text="EmailCollection" variant="lead" />
-      <Paragraph text="SocialNavigation" variant="lead" />
-      <Paragraph text="BrandLogoDisplay" variant="lead" />
-      <Paragraph text="BrandContact" variant="lead" />
-      <Paragraph text="BrandLocation" variant="lead" />
-      <Paragraph text="OurPartners" variant="lead" />
+    <footer data-container={CONTAINERS.footer} data-theme-mode={theme.mode}>
+      <Subheadline text="App Footer" variant="page" />
     </footer>
   );
 };

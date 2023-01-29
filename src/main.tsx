@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LocalStateContextProvider from "./app/local/AppContext";
+import AppContextProvider from "./app/local/AppContext";
 import { Layout, PageWrapper } from "./components/layout";
 import { About, Admin, Contact, Home, NotFound } from "./routes";
 import "./scss/_main.scss";
@@ -13,45 +13,27 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: (
-          <PageWrapper id="pageId?=home" title="Home" content={<Home />} />
-        ),
+        element: <PageWrapper id="home" title="Home" content={<Home />} />,
       },
       {
         path: "about",
-        element: (
-          <PageWrapper id="pageId?=about" title="About" content={<About />} />
-        ),
+        element: <PageWrapper id="about" title="About" content={<About />} />,
       },
       {
         path: "contact",
         element: (
-          <PageWrapper
-            id="pageId?=contact"
-            title="Contact"
-            content={<Contact />}
-          />
+          <PageWrapper id="contact" title="Contact" content={<Contact />} />
         ),
       },
       {
         path: "admin",
         element: (
-          <PageWrapper
-            id="pageId?=admin"
-            title="Admin Toolbox"
-            content={<Admin />}
-          />
+          <PageWrapper id="admin" title="Admin Toolbox" content={<Admin />} />
         ),
       },
       {
         path: "*",
-        element: (
-          <PageWrapper
-            id="pageId?=notFound"
-            title="ERROR: 404 | Page Not Found"
-            content={<NotFound />}
-          />
-        ),
+        element: <PageWrapper id="notFound" content={<NotFound />} />,
       },
     ],
   },
@@ -59,8 +41,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <LocalStateContextProvider>
+    <AppContextProvider>
       <RouterProvider router={router} />
-    </LocalStateContextProvider>
+    </AppContextProvider>
   </React.StrictMode>
 );
